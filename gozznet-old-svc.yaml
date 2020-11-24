@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2020-11-06T15:46:11Z"
+  labels:
+    app: gozznet-old
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app: {}
+      f:spec:
+        f:externalTrafficPolicy: {}
+        f:ports:
+          .: {}
+          k:{"port":80,"protocol":"TCP"}:
+            .: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector:
+          .: {}
+          f:app: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: kubectl-expose
+    operation: Update
+    time: "2020-11-06T15:46:11Z"
+  name: gozznet-old-svc
+  namespace: default
+  resourceVersion: "4175977"
+  selfLink: /api/v1/namespaces/default/services/gozznet-old-svc
+  uid: 71dbcd8d-6e5d-4018-b875-e8e6958a975b
+spec:
+  clusterIP: 10.103.65.118
+  externalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 31423
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: gozznet-old
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
