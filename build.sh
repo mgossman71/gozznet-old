@@ -7,5 +7,5 @@ docker build . -t mgossman71/gozznet-old:latest
 docker push mgossman71/gozznet-old:$version
 docker push mgossman71/gozznet-old:latest
 
-# kubectl create deployment gozznet-old  --image=local/gozznet-old --replicas=3
+# kubectl create deployment gozznet-old  --image=mgossman71/gozznet-old --replicas=3
 # kubectl expose deployment gozznet-old --type=NodePort --name=gozznet-old-svc
