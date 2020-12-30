@@ -1,0 +1,5 @@
+pipeline:
+  build:
+    image: mgossman71/gozznet-old
+    commands:
+      - docker build . -t mgossman71/gozznet-old:v7
