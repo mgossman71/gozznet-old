@@ -6,5 +6,5 @@ steps:
 - name: build
   image: mgossman71/gozznet-old:v7
   commands:
-    - "docker build . -t mgossman71/gozznet-old:drone"
+    - "/usr/bin/docker build . -t mgossman71/gozznet-old:drone"
 
