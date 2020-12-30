@@ -3,13 +3,19 @@ type: docker
 name: default
 
 steps:
-- name: publish
-  image: mgossman71/gozznet-old:v7
-  settings:
-    username:
-      mgossman71
-    password:
-      8e7d796a-0657-48ce-9799-320684fecf33
-    repo: mgossman71/gozznet-old:v7
-    auto_tag: true
-    auto_tag_suffix: drone-build
+- name: build
+  image: docker
+  commands:
+    docker build . -t mgossman71/gozznet-old:drone
+    docker push mgossman71/gozznet-old:drone
+
+#- name: publish
+#  image: mgossman71/gozznet-old:v7
+#  settings:
+#    username:
+#      mgossman71
+#    password:
+#      8e7d796a-0657-48ce-9799-320684fecf33
+#    repo: mgossman71/gozznet-old:v7
+#    auto_tag: true
+#    auto_tag_suffix: drone-build
