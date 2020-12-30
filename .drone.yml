@@ -4,7 +4,8 @@ name: default
 
 steps:
 - name: build
-  image: docker
+  image: docker:git
   commands:
-    - docker build . -t mgossman71/gozznet-old:drone
+    - git clone https://github.com/mgossman71/gozznet-old.git
+    - cd gozznet-old;docker build . -t mgossman71/gozznet-old:drone
     - docker push mgossman71/gozznet-old:drone
