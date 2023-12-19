@@ -1,5 +1,5 @@
 #!/bin/bash
-version=17.2
+version=17.3
 
 docker build . -t mgossman71/gozznet-old:$version
 docker build . -t mgossman71/gozznet-old:latest
